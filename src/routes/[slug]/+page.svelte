@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { formatDate } from '$lib/utils'
+	import { formatDate } from '$lib/utils';
 
-	export let data
+	export let data;
 </script>
 
 <svelte:head>
@@ -13,10 +13,10 @@
 <article>
 	<hgroup>
 		<h1>{data.meta.title}</h1>
-		<p>Published at {formatDate(data.meta.date)}</p>
 	</hgroup>
 
 	<div class="tags">
+		<p>{formatDate(data.meta.date)}</p>
 		{#each data.meta.categories as category}
 			<span class="surface-4">&num;{category}</span>
 		{/each}
@@ -33,23 +33,57 @@
         margin-inline: auto;
     }
 
+
     h1 {
         text-transform: capitalize;
+        width: 100%;
+        position: relative;
+        padding: 0.2em 0;
+        font-size: 3.5rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 600;
+        color: inherit;
+        text-decoration: none;
     }
 
-    h1 + p {
-        margin-top: var(--size-2);
-        color: var(--text-2);
-    }
 
     .tags {
         display: flex;
-        gap: var(--size-3);
-        margin-top: var(--size-7);
+        flex-wrap: wrap;
+        align-items: center;
+        justify-items: center;
+        gap: 0.5em;
+        margin: 0.5rem 0 2rem 0;
     }
 
-    .tags > * {
-        padding: var(--size-2) var(--size-3);
-        border-radius: var(--radius-round);
+    .tags p {
+        font-size: 1.5rem;
+        color: #353535;
+        margin-right: 2rem;
+    }
+
+    .tags > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        padding: 0.2em 0.5em;
+        color: var(--text-color);
+        border: 1px solid var(--text-color);
+        font-size: 1.1rem;
+        font-weight: 600;
+        font-family: 'Merriweather', serif;
+    }
+
+    .prose {
+        font-family: 'Merriweather', serif;
+        font-size: 1.2rem;
+        line-height: 2;
+        color: var(--text-color);
+    }
+
+    .prose a {
+        color: var(--text-color);
+        text-decoration: none;
     }
 </style>

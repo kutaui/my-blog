@@ -43,7 +43,7 @@
 			}}
 		>
 			<input name="theme" value={nextTheme} hidden />
-			<button >
+			<button>
 				<ThemeToggleIcon />
 			</button>
 		</form>
@@ -60,10 +60,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem;
+        padding: 1rem 0 0 0;
         background-color: var(--background-color);
         color: var(--text-color);
-        margin: 0 auto 3rem auto;
+        margin: 0 auto 2rem auto;
     }
 
     ul {
@@ -80,7 +80,6 @@
         gap: 3rem;
     }
 
-
     a {
         color: inherit;
         text-decoration: none;
@@ -89,9 +88,7 @@
         padding: 0.2em 0;
         font-size: 1.5rem;
         font-family: 'JetBrains Mono', monospace;
-
     }
-
 
     li {
         margin: 0 1.5rem;

@@ -1,7 +1,8 @@
 ---
-title: Second
-description: Second post.
-date: '2023-4-16'
+title: Web Accesibility Fundamentals
+description: Learn fundamental concepts about making web applications accessible to all users. 
+  We will cover screen readers, semantic HTML, and ARIA roles.
+date: '2023-10-28'
 categories:
   - sveltekit
   - svelte

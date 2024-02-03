@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -13,6 +14,7 @@ body {
     -webkit-font-smoothing: antialiased;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 img, picture, video, canvas, svg {
@@ -36,7 +38,7 @@ button {
 /* css vars */
 * {
     /* dark */
-    --background-color-dark: #0f172a;
+    --background-color-dark: #131C2F;
     --text-color-dark: rgb(255, 255, 255);
 
     /* light */
@@ -64,10 +66,10 @@ html {
 
 @media (prefers-color-scheme: dark) {
     [data-theme='auto'] {
-        color-scheme: dark;
+        color-scheme: light;
 
-        --background-color: var(--background-color-dark);
-        --text-color: var(--text-color-dark);
+        --background-color: var(--background-color-light);
+        --text-color: var(--text-color-light);
     }
 }
 
