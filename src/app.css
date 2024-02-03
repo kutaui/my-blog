@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -9,6 +11,8 @@
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 img, picture, video, canvas, svg {
@@ -25,8 +29,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 button {
-    all:unset
+    all: unset
 }
+
 
 /* css vars */
 * {
@@ -42,23 +47,27 @@ button {
 :root {
     color-scheme: light;
 
-    --background-color: var(--background-color-dark);
-    --text-color: var(--text-color-dark);
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
 }
 
 [data-theme="dark"] {
     color-scheme: dark;
 
-    --background-color: var(--background-color-light);
-    --text-color: var(--text-color-light);
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+}
+
+html {
+    background-color: var(--background-color);
 }
 
 @media (prefers-color-scheme: dark) {
     [data-theme='auto'] {
         color-scheme: dark;
 
-        --background-color: var(--background-color-light);
-        --text-color: var(--text-color-light);
+        --background-color: var(--background-color-dark);
+        --text-color: var(--text-color-dark);
     }
 }
 
