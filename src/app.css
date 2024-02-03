@@ -1,0 +1,64 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+button {
+    all:unset
+}
+
+/* css vars */
+* {
+    /* dark */
+    --background-color-dark: #0f172a;
+    --text-color-dark: rgb(255, 255, 255);
+
+    /* light */
+    --background-color-light: #ededed;
+    --text-color-light: #000;
+}
+
+:root {
+    color-scheme: light;
+
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    [data-theme='auto'] {
+        color-scheme: dark;
+
+        --background-color: var(--background-color-light);
+        --text-color: var(--text-color-light);
+    }
+}
+
