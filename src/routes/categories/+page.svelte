@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let data;
+
 </script>
 
 <svelte:head>
@@ -9,15 +10,18 @@
 <section>
 	<h3>Categories</h3>
 	<div>
-		{#each data.posts as post}
+		{#each data.posts as post,index}
 			{#each post.categories as category}
-				<a href="/categories/{category}">#{category}</a>
+				{#if !data.posts
+					.flatMap(p => p.categories)
+					.slice(0, index)
+					.includes(category)}
+					<a href="/categories/{category}">#{category}</a>
+				{/if}
 			{/each}
 		{/each}
 	</div>
 </section>
-
-
 <style>
     section {
         display: flex;
@@ -30,7 +34,7 @@
         font-family: 'JetBrains Mono', monospace;
         font-weight: 600;
         font-size: 3rem;
-        margin-bottom: 2rem
+        margin-bottom: 2rem;
     }
 
     div {
@@ -56,3 +60,4 @@
         font-family: 'Merriweather', serif;
     }
 </style>
+

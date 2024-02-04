@@ -5,16 +5,18 @@ import { getHighlighter } from 'shiki';
 import remarkUnwrapImages from 'remark-unwrap-images';
 import remarkToc from 'remark-toc';
 import rehypeSlug from 'rehype-slug';
+import rehypePrettyCode from 'rehype-pretty-code';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
-	extensions: ['.md'],
+	extensions: ['.md', '.svx'],
+	smartypants: true,
 
 	highlight: {
-		highlighter: async (code, lang = 'text') => {
+		highlighter: async ( code, lang = 'text' ) => {
 			const highlighter = await getHighlighter({
 				themes: ['poimandres'],
-				langs: ['javascript', 'typescript', 'bash']
+				langs: ['javascript', 'typescript', 'bash',"html","css"]
 			});
 			const html = escapeSvelte(
 				highlighter.codeToHtml(code, {
@@ -26,12 +28,12 @@ const mdsvexOptions = {
 		}
 	},
 	remarkPlugins: [remarkUnwrapImages, [remarkToc, { tight: true }]],
-	rehypePlugins: [rehypeSlug]
+	rehypePlugins: [rehypeSlug, rehypePrettyCode]
 };
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', '.md'],
+	extensions: ['.svelte', '.md', '.svx'],
 	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 	kit: {
 		adapter: adapter()

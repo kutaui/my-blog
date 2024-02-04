@@ -4,9 +4,9 @@ description: In this post, I share some tips and tricks to make your React appli
   accessible with some tools to help you along the way.
 date: '2023-11-12'
 categories:
-  - Accessibility
-  - React
-  - Next.js
+  - accessibility
+  - react
+  - nextjs
 published: true
 ---
 
@@ -17,8 +17,8 @@ tools to help you along the way.
 
 ## [Eslint Plugin](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
 
-There is an Eslint plugin called eslint-plugin-jsx-a11y which evaluates static JSX and warns you
-when you are not adhering to the a11y guidelines.
+There is an Eslint plugin called `eslint-plugin-jsx-a11y` which evaluates static JSX and warns
+you when you are not adhering to the a11y guidelines.
 
 <br/>
 
@@ -43,19 +43,21 @@ DevTools. You can easily run automated accessibility tests on any website.
 
 ## Focus state
 
-The UI elements should have a clear focus state. So if you mark an element with outline:none or
-outline:0 in CSS, make sure you provide a better focus indicator than the one provided by browsers.
-You can change the default focus style using :focus attribute.
+The UI elements should have a clear focus state. So if you mark an element with `outline:none` or
+`outline:0` in CSS, make sure you provide a better focus indicator than the one provided by
+browsers.
+You can change the default focus style using `:focus` attribute.
 
 <br/>
 
 ## Keyboard keys
 
 All the interactive elements must be activated by the keyboard as per their semantics. If you have
-defined event handlers for touch or click events, then the same handler should be triggered for the
+defined event handlers for `touch` or `click` events, then the same handler should be triggered for
+the
 corresponding keyboard keys.
 
-That is, for example: If you have defined a handler for a button click, then the same should be
+That is, for _example_: If you have defined a handler for a button click, then the same should be
 triggered for pressing Enter or Space key. Apply proper semantics for arrow keys, Tab, Shift + Tab
 etc.,
 
@@ -71,10 +73,11 @@ Tab through the content of your website to ensure the focus is not trapped withi
 
 The tab order should be in coherence with the logical flow/order of a web page.
 
-- A tabindex of 0allows elements other than links and form elements to receive keyboard focus. These
+- A ``tabindex of 0`` allows elements other than links and form elements to receive keyboard
+  focus. These
   DOM elements receive focus in the order they are arranged in DOM. This tabindex value is handy
   when you want to make elements like div or li to be accessible with the tab key.
-- A tabindex of -1 means an element is not accessible via sequential keyboard navigation but could
+- A `tabindex of -1` means an element is not accessible via sequential keyboard navigation but could
   be focussed with Javascript or using the mouse.
 - Avoid using a positive value of tabindex because this value determines the order in which the
   element would be accessed while pressing the tab key. If an element down the page is set with a

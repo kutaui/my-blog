@@ -49,6 +49,7 @@ button {
     all: unset;
 }
 
+
 /* css vars */
 * {
     /* dark */
@@ -60,6 +61,17 @@ button {
     --background-color-light: #ededed;
     --text-color-light: #000;
 }
+
+code {
+    background-color: rgba(111, 111, 111, 0.22);
+}
+
+blockquote {
+    border-left: 4px solid rgba(111, 111, 111, 0.22);
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+}
+
 
 :root {
     color-scheme: light;

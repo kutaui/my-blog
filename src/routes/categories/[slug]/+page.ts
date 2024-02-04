@@ -8,7 +8,6 @@ export async function load({ params, fetch }) {
 		if (posts.length === 0) {
 			throw error(404, `No posts found for category: ${params.slug}`);
 		}
-		console.log(posts);
 		return {
 			posts
 		};

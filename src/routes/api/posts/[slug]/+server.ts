@@ -7,6 +7,5 @@ export async function GET({ params }) {
 	const { slug } = params;
 
 	const filteredPosts = posts.filter(post => post.categories.includes(slug));
-	console.log(filteredPosts);
 	return json(filteredPosts);
 }
