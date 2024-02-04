@@ -37,8 +37,7 @@ DevTools. You can easily run automated accessibility tests on any website.
 
 <br/>
 
-
-------------
+---
 
 <br/>
 
@@ -72,12 +71,12 @@ Tab through the content of your website to ensure the focus is not trapped withi
 
 The tab order should be in coherence with the logical flow/order of a web page.
 
-* A tabindex of 0allows elements other than links and form elements to receive keyboard focus. These
+- A tabindex of 0allows elements other than links and form elements to receive keyboard focus. These
   DOM elements receive focus in the order they are arranged in DOM. This tabindex value is handy
   when you want to make elements like div or li to be accessible with the tab key.
-* A tabindex of -1 means an element is not accessible via sequential keyboard navigation but could
+- A tabindex of -1 means an element is not accessible via sequential keyboard navigation but could
   be focussed with Javascript or using the mouse.
-* Avoid using a positive value of tabindex because this value determines the order in which the
+- Avoid using a positive value of tabindex because this value determines the order in which the
   element would be accessed while pressing the tab key. If an element down the page is set with a
   higher tabindex, it will receive focus before the one at the top of the DOM tree. It creates
   confusions and must be avoided
@@ -99,7 +98,7 @@ applications to create accessible animations.
 
 <br/>
 
-----
+---
 
 <br/>
 
@@ -114,12 +113,14 @@ tabindex, etc.
 
 <br/>
 
-----
+---
 
 <br/>
 
 Here is a free short course on all of these topics if you prefer learning by watching videos.
 
 https://egghead.io/courses/develop-accessible-web-apps-with-react
+
+```
 
 ```

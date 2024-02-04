@@ -31,8 +31,9 @@
     article {
         max-inline-size: var(--size-content-3);
         margin-inline: auto;
+        width: 80%;
+        margin: 0 auto;
     }
-
 
     h1 {
         text-transform: capitalize;
@@ -45,7 +46,6 @@
         color: inherit;
         text-decoration: none;
     }
-
 
     .tags {
         display: flex;
@@ -80,10 +80,6 @@
         font-size: 1.2rem;
         line-height: 2;
         color: var(--text-color);
-    }
 
-    .prose a {
-        color: var(--text-color);
-        text-decoration: none;
     }
 </style>

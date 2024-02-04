@@ -32,7 +32,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/jetbrains-mono": "^5.0.18",
 		"rehype-slug": "^6.0.0",
 		"remark-toc": "^9.0.0",
 		"remark-unwrap-images": "^4.0.0",

@@ -1,75 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 * {
-    margin: 0;
+	margin: 0;
 }
 
 body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
 }
 
-img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
 }
 
-input, button, textarea, select {
-    font: inherit;
+input,
+button,
+textarea,
+select {
+	font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
 }
 
 button {
-    all: unset
+	all: unset;
 }
-
 
 /* css vars */
 * {
-    /* dark */
-    --background-color-dark: #131C2F;
-    --text-color-dark: rgb(255, 255, 255);
+	/* dark */
+	--background-color-dark: #131c2f;
+	--text-color-dark: rgb(255, 255, 255);
 
-    /* light */
-    --background-color-light: #ededed;
-    --text-color-light: #000;
+	/* light */
+	--background-color-light: #ededed;
+	--text-color-light: #000;
 }
 
 :root {
-    color-scheme: light;
+	color-scheme: light;
 
-    --background-color: var(--background-color-light);
-    --text-color: var(--text-color-light);
+	--background-color: var(--background-color-light);
+	--text-color: var(--text-color-light);
 }
 
-[data-theme="dark"] {
-    color-scheme: dark;
+[data-theme='dark'] {
+	color-scheme: dark;
 
-    --background-color: var(--background-color-dark);
-    --text-color: var(--text-color-dark);
+	--background-color: var(--background-color-dark);
+	--text-color: var(--text-color-dark);
 }
 
 html {
-    background-color: var(--background-color);
+	background-color: var(--background-color);
 }
 
 @media (prefers-color-scheme: dark) {
-    [data-theme='auto'] {
-        color-scheme: light;
+	[data-theme='auto'] {
+		color-scheme: light;
 
-        --background-color: var(--background-color-light);
-        --text-color: var(--text-color-light);
-    }
+		--background-color: var(--background-color-light);
+		--text-color: var(--text-color-light);
+	}
 }
-

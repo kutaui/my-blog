@@ -6,21 +6,22 @@ import remarkUnwrapImages from 'remark-unwrap-images';
 import remarkToc from 'remark-toc';
 import rehypeSlug from 'rehype-slug';
 
-
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.md'],
 
 	highlight: {
-		highlighter: async ( code, lang = 'text' ) => {
+		highlighter: async (code, lang = 'text') => {
 			const highlighter = await getHighlighter({
 				themes: ['poimandres'],
 				langs: ['javascript', 'typescript', 'bash']
 			});
-			const html = escapeSvelte(highlighter.codeToHtml(code, {
-				lang,
-				theme: 'poimandres'
-			}));
+			const html = escapeSvelte(
+				highlighter.codeToHtml(code, {
+					lang,
+					theme: 'poimandres'
+				})
+			);
 			return `{@html \`${html}\` }`;
 		}
 	},
