@@ -26,69 +26,73 @@
 </section>
 
 <style>
-	section {
-		margin: 0 auto;
-	}
+    section {
+        margin: 0 auto;
+    }
 
-	.posts {
-		list-style: none;
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-	}
+    .posts {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
 
-	.post {
-		margin-bottom: 2rem;
-	}
+    .post {
+        margin-bottom: 2rem;
 
-	.title {
-		width: 100%;
-		position: relative;
-		padding: 0.2em 0;
-		font-size: 2.8rem;
-		font-family: 'JetBrains Mono', monospace;
-		font-weight: 600;
-		color: inherit;
-		text-decoration: none;
-	}
+    }
 
-	.categories {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-items: center;
-		gap: 0.5em;
-		margin: 0.5rem 0;
-	}
+    .title {
+        width: 100%;
+        position: relative;
+        padding: 0.2em 0;
+        font-size: 2.8rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 600;
+        color: inherit;
+        text-decoration: none;
+    }
 
-	.category {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 9999px;
-		padding: 0.2em 0.5em;
-		color: var(--text-color);
-		border: 1px solid var(--text-color);
-		font-size: 1.1rem;
-		font-weight: 600;
-		font-family: 'Merriweather', serif;
-	}
+    .categories {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-items: center;
+        gap: 0.5em;
+        margin: 0.5rem 0;
 
-	.description {
-		font-size: 1.6rem;
-		color: var(--text-color);
-		margin: 0.5rem 0;
-		width: 85%;
-		font-family: 'Merriweather', serif;
-	}
+    }
 
-	.date {
-		font-size: 1.2rem;
-		color: #353535;
-		font-weight: 600;
-	}
+    .category {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        padding: 0.2em 0.5em;
+        color: var(--text-color-soft);
+        text-decoration: none;
+        border: 1px solid var(--text-color);
+        font-size: 1.1rem;
+        font-weight: 600;
+        font-family: 'Merriweather', serif;
+    }
 
-	a:hover {
-		opacity: 0.7;
-	}
+    .description {
+        font-size: 1.6rem;
+        color: var(--text-color-soft);
+
+        margin: 1rem 0;
+        width: 85%;
+        font-family: 'Merriweather', serif;
+    }
+
+    .date {
+        font-size: 1.2rem;
+        color: var(--text-color-soft);
+        font-weight: 600;
+    }
+
+    a:hover {
+        opacity: 0.7;
+    }
 </style>

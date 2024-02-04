@@ -12,7 +12,7 @@
 	<ul class="posts">
 		{#each data.posts as post}
 			<li class="post">
-				<a href="/{post.slug}"  class="title">{post.title}</a>
+				<a href="/{post.slug}" class="title">{post.title}</a>
 				<div class="categories">
 					<p class="date">{formatDate(post.date)}</p>
 					{#each post.categories as category}
@@ -67,7 +67,7 @@
         justify-content: center;
         border-radius: 9999px;
         padding: 0.2em 0.5em;
-        color: var(--text-color);
+        color: var(--text-color-soft);
         border: 1px solid var(--text-color);
         font-size: 1.1rem;
         font-weight: 600;
@@ -76,7 +76,8 @@
 
     .description {
         font-size: 1.6rem;
-        color: var(--text-color);
+        color: var(--text-color-soft);
+
         margin: 0.5rem 0;
         width: 85%;
         font-family: 'Merriweather', serif;
@@ -84,7 +85,7 @@
 
     .date {
         font-size: 1.2rem;
-        color: #353535;
+        color: var(--text-color-soft);
         font-weight: 600;
     }
 

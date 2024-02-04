@@ -49,7 +49,7 @@
         justify-content: center;
         border-radius: 9999px;
         padding: 0.2em 0.5em;
-        color: var(--text-color);
+        color: var(--text-color-soft);
         border: 1px solid var(--text-color);
         font-size: 1.1rem;
         font-weight: 600;

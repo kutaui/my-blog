@@ -29,7 +29,7 @@
 
 <style>
     article {
-        max-inline-size: var(--size-content-3);
+
         margin-inline: auto;
         width: 80%;
         margin: 0 auto;
@@ -58,7 +58,7 @@
 
     .tags p {
         font-size: 1.5rem;
-        color: #353535;
+        color: var(--text-color-soft);
         margin-right: 2rem;
     }
 
@@ -68,7 +68,7 @@
         justify-content: center;
         border-radius: 9999px;
         padding: 0.2em 0.5em;
-        color: var(--text-color);
+        color: var(--text-color-soft);
         border: 1px solid var(--text-color);
         font-size: 1.1rem;
         font-weight: 600;
@@ -79,7 +79,6 @@
         font-family: 'Merriweather', serif;
         font-size: 1.2rem;
         line-height: 2;
-        color: var(--text-color);
-
+        color: var(--text-color-soft);
     }
 </style>
