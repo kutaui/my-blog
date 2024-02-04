@@ -12,7 +12,7 @@
 	<ul class="posts">
 		{#each data.posts as post}
 			<li class="post">
-				<a href={post.slug} class="title">{post.title}</a>
+				<a href="/{post.slug}" class="title">{post.title}</a>
 				<div class="categories">
 					<p class="date">{formatDate(post.date)}</p>
 					{#each post.categories as category}
