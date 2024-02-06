@@ -10,7 +10,7 @@
 <ul class="posts">
 	{#each posts as post}
 		<li class="post">
-			<a href="/{post.slug}" class="title">>> {post.title}</a>
+			<a href="/{post.slug}" class="title"><span>>></span>{post.title}</a>
 			<div class="categories">
 				<p class="date">{formatDate(post.date)}</p>
 				{#each post.categories as category}
@@ -46,6 +46,10 @@
         text-decoration: none;
     }
 
+    span {
+        margin-right: 3px;
+    }
+
     .categories {
         display: flex;
         flex-wrap: wrap;
@@ -73,5 +77,33 @@
 
     a:hover {
         opacity: 0.7;
+    }
+
+    @media screen and (max-width: 600px) {
+        .title {
+            font-size: 2.5rem;
+        }
+
+		    .description {
+		        font-size: 1.4rem;
+		    }
+
+		    .date {
+		        font-size: 1rem;
+		    }
+    }
+
+    @media screen and (max-width: 400px) {
+        .title {
+            font-size: 2rem;
+        }
+
+        .description {
+            font-size: 1rem;
+        }
+
+        .date {
+						font-size: 0.8rem;
+				}
     }
 </style>

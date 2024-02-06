@@ -12,9 +12,7 @@
 </svelte:head>
 
 <article>
-	<hgroup>
 		<h1>{data.meta.title}</h1>
-	</hgroup>
 
 	<div class="tags">
 		<p>{formatDate(data.meta.date)}</p>
@@ -70,5 +68,22 @@
 		    margin-bottom: 5rem;
     }
 
+    @media screen and (max-width: 768px) {
+				article {
+						width: 90%;
+				}
+
+				h1 {
+						font-size: 2.5rem;
+				}
+
+				.tags p {
+						font-size: 1.2rem;
+				}
+
+				.prose {
+						font-size: 1rem;
+				}
+		}
 
 </style>

@@ -128,4 +128,28 @@
     li a:focus::after {
         transform: translate3d(0, 0, 0);
     }
+
+    @media screen and (max-width: 600px) {
+        h3 a {
+            font-size: 2rem;
+        }
+
+        a {
+            font-size: 1.2rem;
+        }
+
+        li {
+            margin: 0 1rem;
+        }
+
+        button {
+						width: 30px;
+				}
+
+        nav {
+						gap: 0.3rem;
+				}
+    }
+
+
 </style>

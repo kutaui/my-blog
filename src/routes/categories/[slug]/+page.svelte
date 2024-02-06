@@ -14,6 +14,7 @@
 
 <section>
 	<h1>Posts tagged "{tagName}"</h1>
+	<hr />
 	<div>
 		<Posts posts={data.posts} />
 	</div>
@@ -21,7 +22,17 @@
 
 <style>
     h1 {
-        margin-bottom: 1em;
         font-size: 3.5rem;
+    }
+
+    hr {
+        border-color: inherit;
+        margin: 2rem 0;
+    }
+
+    @media screen and (max-width: 600px) {
+        h1 {
+            font-size: 2.5rem;
+        }
     }
 </style>
