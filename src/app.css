@@ -66,6 +66,11 @@ code {
     background-color: rgba(111, 111, 111, 0.22);
 }
 
+pre code {
+    background-color: transparent;
+    white-space: pre-wrap;
+}
+
 blockquote {
     border-left: 4px solid rgba(111, 111, 111, 0.22);
     padding: 0.5rem 1rem;
@@ -74,6 +79,8 @@ blockquote {
 
 
 :root {
+
+
     color-scheme: light;
 
     --background-color: var(--background-color-light);

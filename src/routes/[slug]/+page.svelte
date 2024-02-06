@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
+	import Tag from '$lib/components/Tag.svelte';
 
 	export let data;
 </script>
@@ -18,7 +19,7 @@
 	<div class="tags">
 		<p>{formatDate(data.meta.date)}</p>
 		{#each data.meta.categories as category}
-			<span class="surface-4">&num;{category}</span>
+			<Tag link="/categories/{category}" title="#{category}" />
 		{/each}
 	</div>
 
@@ -60,19 +61,6 @@
         font-size: 1.5rem;
         color: var(--text-color-soft);
         margin-right: 2rem;
-    }
-
-    .tags > span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 9999px;
-        padding: 0.2em 0.5em;
-        color: var(--text-color-soft);
-        border: 1px solid var(--text-color);
-        font-size: 1.1rem;
-        font-weight: 600;
-        font-family: 'Merriweather', serif;
     }
 
     .prose {

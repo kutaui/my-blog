@@ -11,6 +11,7 @@ export async function load({ params, fetch }) {
 		return {
 			posts
 		};
+
 	} catch (e) {
 		throw error(404, `Could not find ${params.slug}`);
 	}

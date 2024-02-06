@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Tag from '$lib/components/Tag.svelte';
+
 	export let data;
 
 </script>
@@ -16,7 +18,7 @@
 					.flatMap(p => p.categories)
 					.slice(0, index)
 					.includes(category)}
-					<a href="/categories/{category}">#{category}</a>
+					<Tag link="/categories/{category}" title="#{category}" />
 				{/if}
 			{/each}
 		{/each}
@@ -47,17 +49,6 @@
         width: 70%;
     }
 
-    a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 9999px;
-        padding: 0.2em 0.5em;
-        color: var(--text-color-soft);
-        border: 1px solid var(--text-color);
-        font-size: 1.1rem;
-        font-weight: 600;
-        font-family: 'Merriweather', serif;
-    }
+
 </style>
 

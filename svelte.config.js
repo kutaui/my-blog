@@ -15,15 +15,12 @@ const mdsvexOptions = {
 	highlight: {
 		highlighter: async ( code, lang = 'text' ) => {
 			const highlighter = await getHighlighter({
-				themes: ['poimandres'],
-				langs: ['javascript', 'typescript', 'bash',"html","css"]
+				themes: ['catppuccin-frappe', 'nord'],
+				langs: ['javascript', 'typescript', 'bash', 'html', 'css']
 			});
-			const html = escapeSvelte(
-				highlighter.codeToHtml(code, {
-					lang,
-					theme: 'poimandres'
-				})
-			);
+			const html = escapeSvelte(highlighter.codeToHtml(code, {
+				themes: { light: 'catppuccin-frappe', dark: 'nord' }, lang
+			}));
 			return `{@html \`${html}\` }`;
 		}
 	},

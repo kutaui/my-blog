@@ -116,8 +116,13 @@ aria-checked="false" aria-label="Agree to our terms"></div>
 
 The `aria-label` attribute labels our element for screen readers. So this would read: “Agree to our terms, unchecked, checkbox”. This looks good for a starting point.
 
+<br/>
+
 There is also an attribute called aria-labelledby which is used to label an element by another
 element.
+
+![Alt](img1.webp)
+
 
 <br/>
 

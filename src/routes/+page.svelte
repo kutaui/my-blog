@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
+	import Tag from '$lib/components/Tag.svelte';
 
 	export let data;
 </script>
@@ -16,7 +17,7 @@
 				<div class="categories">
 					<p class="date">{formatDate(post.date)}</p>
 					{#each post.categories as category}
-						<a href="/categories/{category}" class="category">#{category}</a>
+						<Tag link="/categories/{category}" title="#{category}" />
 					{/each}
 				</div>
 				<p class="description">{post.description}</p>
