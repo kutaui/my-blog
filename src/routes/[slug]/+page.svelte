@@ -30,7 +30,6 @@
 
 <style>
     article {
-
         margin-inline: auto;
         width: 80%;
         margin: 0 auto;
@@ -68,6 +67,7 @@
         font-size: 1.2rem;
         line-height: 2;
         color: var(--text-color-soft);
+		    margin-bottom: 5rem;
     }
 
 

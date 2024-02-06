@@ -10,7 +10,7 @@
 <ul class="posts">
 	{#each posts as post}
 		<li class="post">
-			<a href="/{post.slug}" class="title">{post.title}</a>
+			<a href="/{post.slug}" class="title">>> {post.title}</a>
 			<div class="categories">
 				<p class="date">{formatDate(post.date)}</p>
 				{#each post.categories as category}
@@ -54,20 +54,6 @@
         gap: 0.5em;
         margin: 0.5rem 0;
 
-    }
-
-    .category {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 9999px;
-        padding: 0.2em 0.5em;
-        color: var(--text-color-soft);
-        text-decoration: none;
-        border: 1px solid var(--text-color);
-        font-size: 1.1rem;
-        font-weight: 600;
-        font-family: 'Merriweather', serif;
     }
 
     .description {
