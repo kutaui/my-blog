@@ -6,6 +6,8 @@
 
 <svelte:head>
 	<title>Kutay's Blog</title>
+	<meta name="description" content="Learn all things related to Web Development" />
+	<meta property="og:title" content="Kutay's Blog" />
 </svelte:head>
 
 <section>
@@ -13,5 +15,4 @@
 </section>
 
 <style>
-
 </style>

@@ -6,6 +6,7 @@
 
 <svelte:head>
 	<title>Kutay | Categories</title>
+	<meta name="description" content="Categories to filter by." />
 </svelte:head>
 
 <section>

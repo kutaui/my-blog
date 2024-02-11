@@ -5,11 +5,11 @@
 	export let data;
 
 	$: tagName = $page.url.pathname.split('/').pop();
-
 </script>
 
 <svelte:head>
 	<title>Categories | {tagName}</title>
+	<meta name="description" content="Posts tagged with {tagName}." />
 </svelte:head>
 
 <section>
@@ -21,18 +21,18 @@
 </section>
 
 <style>
-    h1 {
-        font-size: 3.5rem;
-    }
+	h1 {
+		font-size: 3.5rem;
+	}
 
-    hr {
-        border-color: inherit;
-        margin: 2rem 0;
-    }
+	hr {
+		border-color: inherit;
+		margin: 2rem 0;
+	}
 
-    @media screen and (max-width: 600px) {
-        h1 {
-            font-size: 2.5rem;
-        }
-    }
+	@media screen and (max-width: 600px) {
+		h1 {
+			font-size: 2.5rem;
+		}
+	}
 </style>

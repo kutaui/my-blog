@@ -8,7 +8,8 @@
 <svelte:head>
 	<title>Kutay | {data.meta.title}</title>
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content={data.meta.title} />
+	<meta property="og:title" content="Kutay | {data.meta.title}" />
+	<meta name="description" content="{data.meta.title}. {data.meta.description}" />
 </svelte:head>
 
 <article>
