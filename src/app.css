@@ -79,8 +79,6 @@ blockquote {
 
 
 :root {
-
-
     color-scheme: light;
 
     --background-color: var(--background-color-light);
@@ -99,11 +97,11 @@ html {
     background-color: var(--background-color);
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     [data-theme='auto'] {
-        color-scheme: light;
+        color-scheme: dark;
 
-        --background-color: var(--background-color-light);
-        --text-color: var(--text-color-light);
+        --background-color: var(--background-color);
+        --text-color: var(--text-color);
     }
 }

@@ -13,8 +13,8 @@
 				return 'dark';
 			case 'auto':
 			default:
-				if (!browser) return 'auto';
-				return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark';
+				return browser && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' :
+				'dark';
 		}
 	};
 	$: nextTheme = deriveNextTheme($theme);
