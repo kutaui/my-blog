@@ -22,7 +22,6 @@
 
 <style>
     h1 {
-        font-family: 'JetBrains Mono', monospace;
         font-size: 3.5rem;
     }
 

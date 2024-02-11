@@ -1,12 +1,12 @@
 ---
 title: Accessibility in React
-description: Here are some tools, tips & tricks to make your React applications more 
-  accessible.
-
+description: In this post, I share some tips and tricks to make your React applications more
+  accessible with some tools to help you along the way.
 date: '2023-11-12'
 categories:
   - accessibility
   - react
+  - nextjs
 published: true
 ---
 
