@@ -5,7 +5,7 @@ description: Learn fundamental concepts about making web applications accessible
 date: '2023-10-28'
 categories:
   - accessibility
-  - webdevelopment
+  - webdev
 published: true
 ---
 
