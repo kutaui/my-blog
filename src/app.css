@@ -102,6 +102,6 @@ html {
         color-scheme: dark;
 
         --background-color: var(--background-color);
-        --text-color: var(--text-color);
+        --text-color: var(--text-color-dark);
     }
 }
