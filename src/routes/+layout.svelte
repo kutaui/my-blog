@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import { inject } from '@vercel/analytics';
+	import { dev } from '$app/environment';
 
 	import Header from '$lib/components/Header/Header.svelte';
 	import { theme } from '$lib/stores/theme';
@@ -11,7 +12,8 @@
 
 	$theme = data.theme;
 	$: browser && (document.documentElement.dataset.theme = $theme);
-	inject();
+
+	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <Header />
