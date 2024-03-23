@@ -6,8 +6,12 @@
 
 <svelte:head>
 	<title>Kutay's Blog</title>
+	<meta property="twitter:title" content="Kutay's Blog" />
+	<meta property="twitter:description" content="All the things Web Development" />
 	<meta property="og:title" content="Kutay's Blog" />
 	<meta property="og:description" content="All the things Web Development" />
+	<meta name="title" content="Kutay's Blog" />
+	<meta name="description" content="All the things Web Development" />
 </svelte:head>
 
 <section>
