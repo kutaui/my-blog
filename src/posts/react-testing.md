@@ -3,9 +3,9 @@ title: WHAT to test in React
 description: You probably know how to test React components, but do you know what to test?
 date: '2024-04-01'
 categories:
-  - testing
   - react
   - nextjs
+  - testing
 published: true
 ---
 

@@ -4,9 +4,9 @@ description: In this post, I share some tips and tricks to make your React appli
   accessible with some tools to help you along the way.
 date: '2023-11-12'
 categories:
-  - accessibility
   - react
   - nextjs
+  - accessibility
 published: true
 ---
 

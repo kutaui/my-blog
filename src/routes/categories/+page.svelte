@@ -2,6 +2,8 @@
 	import Tag from '$lib/components/Tag.svelte';
 
 	export let data;
+
+	let uniqueCategories = [...new Set(data.posts.flatMap((post) => post.categories))];
 </script>
 
 <svelte:head>
@@ -12,15 +14,8 @@
 <section>
 	<h3>Categories</h3>
 	<div>
-		{#each data.posts as post, index}
-			{#each post.categories as category}
-				{#if !data.posts
-					.flatMap((p) => p.categories)
-					.slice(0, index)
-					.includes(category)}
-					<Tag link="/categories/{category}" title="#{category}" />
-				{/if}
-			{/each}
+		{#each uniqueCategories as category}
+			<Tag link="/categories/{category}" title="#{category}" />
 		{/each}
 	</div>
 </section>
