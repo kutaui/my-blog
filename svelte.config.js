@@ -13,14 +13,17 @@ const mdsvexOptions = {
 	smartypants: true,
 
 	highlight: {
-		highlighter: async ( code, lang = 'text' ) => {
+		highlighter: async (code, lang = 'text') => {
 			const highlighter = await getHighlighter({
 				themes: ['catppuccin-frappe', 'nord'],
-				langs: ['javascript', 'typescript', 'bash', 'html', 'css']
+				langs: ['javascript', 'typescript', 'bash', 'html', 'css', 'jsx']
 			});
-			const html = escapeSvelte(highlighter.codeToHtml(code, {
-				themes: { light: 'catppuccin-frappe', dark: 'nord' }, lang
-			}));
+			const html = escapeSvelte(
+				highlighter.codeToHtml(code, {
+					themes: { light: 'catppuccin-frappe', dark: 'nord' },
+					lang
+				})
+			);
 			return `{@html \`${html}\` }`;
 		}
 	},

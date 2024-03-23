@@ -1,20 +1,18 @@
 <script lang="ts">
 	import '../app.css';
-	import { inject } from '@vercel/analytics';
-	import { dev } from '$app/environment';
 
 	import Header from '$lib/components/Header/Header.svelte';
 	import { theme } from '$lib/stores/theme';
 	import { browser } from '$app/environment';
 	import type { LayoutServerData } from '../../.svelte-kit/types/src/routes/$types';
+	import Footer from '$lib/components/Footer.svelte';
 
 	export let data: LayoutServerData;
 
 	$theme = data.theme;
 	$: browser && (document.documentElement.dataset.theme = $theme);
-
-	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <Header />
 <slot />
+<Footer {data} />
