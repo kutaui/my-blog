@@ -3,13 +3,25 @@
 	import Tag from '$lib/components/Tag.svelte';
 
 	export let data;
+	console.log(data);
 </script>
 
 <svelte:head>
-	<title>Kutay | {data.meta.title}</title>
+	<title>{data.meta.title}</title>
+	<meta name="description" content={data.meta.description} />
+	<!-- Twitter --->
+	<meta property="twitter:title" content={data.meta.title} />
+	<meta property="twitter:description" content={data.meta.description} />
+	<meta property="twitter:site" content="@kutaui" />
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:creator" content="@kutaul" />
+	<!-- Open Graph --->
+	<meta property="og:title" content={data.meta.title} />
+	<meta property="og:description" content={data.meta.description} />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="Kutay | {data.meta.title}" />
-	<meta name="description" content="{data.meta.title}. {data.meta.description}" />
+	<meta property="og:url" content={`https://blog.kutaybekleric.com/${data.meta.slug}`} />
+	<meta property="article:author" content="Kutaui | Kutay" />
+	<meta property="article:published_time" content={data.meta.date} />
 </svelte:head>
 
 <article>
