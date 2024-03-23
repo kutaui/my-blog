@@ -13,7 +13,7 @@
 	<meta property="twitter:title" content={data.meta.title} />
 	<meta property="twitter:description" content={data.meta.description} />
 	<meta property="twitter:site" content="@kutaui" />
-	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:card" content="summary" />
 	<meta property="twitter:creator" content="@kutaul" />
 	<!-- Open Graph --->
 	<meta property="og:title" content={data.meta.title} />

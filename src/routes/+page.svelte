@@ -4,7 +4,11 @@
 	export let data;
 </script>
 
-<svelte:head></svelte:head>
+<svelte:head>
+	<title>Kutay's Blog</title>
+	<meta property="og:title" content="Kutay's Blog" />
+	<meta property="og:description" content="All the things Web Development" />
+</svelte:head>
 
 <section>
 	<Posts posts={data.posts} />
