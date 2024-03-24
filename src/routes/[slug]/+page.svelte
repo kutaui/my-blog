@@ -3,7 +3,6 @@
 	import Tag from '$lib/components/Tag.svelte';
 
 	export let data;
-	console.log(data);
 </script>
 
 <svelte:head>
