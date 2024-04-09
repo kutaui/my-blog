@@ -1,3 +1,4 @@
+
 export async function GET() {
 	return new Response(
 		`
@@ -10,7 +11,14 @@ export async function GET() {
 			xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
 			xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
 		>
-			<!-- <url> elements go here -->
+		<url>
+			<loc>https://blog.kutaybekleric.com</loc>
+			<priority>0.7</priority>
+        </url>
+		<url>
+		    <loc>https://blog.kutaybekleric.com/categories</loc>
+			<priority>0.7</priority>
+	    </url>
 		</urlset>`.trim(),
 		{
 			headers: {
