@@ -7,6 +7,7 @@ categories:
   - react
   - nextjs
   - accessibility
+  - frontend
 published: true
 ---
 

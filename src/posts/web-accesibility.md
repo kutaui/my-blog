@@ -5,6 +5,7 @@ description: Learn fundamental concepts about making web applications accessible
 date: '2023-10-28'
 categories:
   - accessibility
+  - frontend
 published: true
 ---
 
@@ -139,7 +140,7 @@ terms, unchecked, checkbox”. This looks good for a starting point.
 There is also an attribute called aria-labelledby which is used to label an element by another
 element.
 
-![Alt](img1.webp)
+![Code screenshot explaning 'aria-labelledby'](img1.webp)
 
 
 <br/>

@@ -6,6 +6,7 @@ categories:
   - react
   - nextjs
   - testing
+  - frontend
 published: true
 ---
 
