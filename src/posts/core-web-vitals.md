@@ -1,7 +1,7 @@
 ---
 title: Core Web Vitals and Web Performance
 description: What are Core Web Vitals and how to catch regressions and fix issues with each Vital.
-date: '2024-09-23'
+date: '2024-08-20'
 categories:
   - performance
   - frontend
