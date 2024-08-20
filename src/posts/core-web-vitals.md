@@ -156,6 +156,8 @@ A few technicalities about INP that you may care about:
 
 - INP uses the Event Timing API which is supported in Chrome and Firefox (not available for Safari)
 
+<br/>
+
 ### What makes INP slower?
 
 - Long-running JavaScript event handlers
@@ -254,9 +256,13 @@ CLS is a formula-based metric that takes into account how much a page's visual c
 
 ![A line with three colors showcasing Cumulative Layout Shift measurement](https://blog-img.speedcurve.com/img/492/d68b54c-header-cls.png?auto=format,compress&fit=max&w=2000)
 
+<br/>
+
 **What makes CLS worse?**
 
 One of the benefits of Cumulative Layout Shift is that it makes us think outside of the usual time-based metrics, and instead gets us thinking about the other subtle ways that unoptimized page elements can degrade the user experience.
+
+<br/>
 
 CLS is strongly affected by the number of resources on the page, and by how and when those resources are served. If your CLS score is poor, some of the biggest culprits are:
 
@@ -280,6 +286,8 @@ CLS is strongly affected by the number of resources on the page, and by how and 
 
 After collecting the metrics data and understanding the problem, we can start with actual performance optimization and reduce the CLS. We should improve the most important elements/pages on the website first and track how the improvements affect the score.
 
+<br/>
+
 **Add Size Attributes to Images and Video**
 
 Size attributes are the low-hanging fruit of CLS optimization. Always include width and height size attributes on your images and video elements to ensure sufficient space is allocated on the page before the browser started fetching them.
@@ -288,9 +296,13 @@ Size attributes are the low-hanging fruit of CLS optimization. Always include wi
 <img src="example.jpg" width="360" height="180" alt="example">
 ```
 
+<br/>
+
 **Content dynamically injected with JavaScript**
 
 Dynamically injected content refers to the DOM elements that get added dynamically above existing content. These can be banners, ads with dynamic sizing, cookie consent popups, iframes, widgets that dynamically resize (like chat windows) or any kind of content inserted after the initial page load.
+
+<br/>
 
 *Possible Solutions*
 
