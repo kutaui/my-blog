@@ -17,7 +17,7 @@ There are (currently) three metrics that focus on *loading*, *interactivity*, an
 
 <br/>
 
-![Listing three Core Web Vitals with their metrics](core-web-vitals.jpg)
+![Listing three Core Web Vitals with their metrics](https://blog-img.speedcurve.com/img/492/core-web-vitals-new.png?auto=format,compress&fit=max&w=2000)
 
 <br/>
 
@@ -31,12 +31,17 @@ There are (currently) three metrics that focus on *loading*, *interactivity*, an
 
 **It's important to make the distinction between Core Web Vitals and Web Vitals**. Core Web Vitals focus on user experience metrics. They are a subset of Web Vitals – including Time to First Byte and Total Blocking Time – that serve as supplemental metrics for diagnosing specific performance issues.
 
+<br/>
+
 ## Core Web Vitals and SEO
 
 Core Web Vitals are among the page experience signals that Google factors into search ranking, alongside mobile-friendliness, security, and absence of intrusive interstitials. Since Web Vitals were announced, they've shot to the top of many people's list of things to care about.
 
+<br/>
+
 **Don't make pages faster solely for SEO purposes**. You should make your pages faster because it makes your users happier and consumes less of their data, especially on mobile devices. Happier users spend more time on your site, are more likely to return, and are more likely to recommend your site to others.
 
+<br/>
 
 ## Largest Contentful Paint (LCP)
 
@@ -44,12 +49,16 @@ Largest Contentful Paint measures when the largest visual element on the page re
 
 ![A line with three colors showcasing Largest Contenful Paint measurement](https://blog-img.speedcurve.com/img/492/0f46dec-header-lcp.png?auto=format,compress&fit=max&w=2000)
 
+<br/>
+
 **What makes LCP slower?**
 
 - Slow server response times
 - Render-Blocking JavaScript and CSS
 - Slow Resource Load Times
 - Client-Side Rendering
+
+<br/>
 
 ### How to measure and investigate LCP
 
@@ -59,6 +68,8 @@ To optimize the LCP metric and improve your website's performance, you first nee
 
 You can do that using different performance tools, including PageSpeed Insights, Lighthouse, Chrome DevTools.
 
+<br/>
+
 **Optimize server response time**
 
 Loading a website always starts by loading an HTML document. Before the browser starts downloading the document no content can be displayed.
@@ -66,6 +77,8 @@ Loading a website always starts by loading an HTML document. Before the browser 
 You can check if server response time is an issue by looking at the Time to First Byte (TTFB) metric. The TTFB should be below 800 milliseconds. Use the free DebugBear website speed test to test your TTFB.
 
 ![A metric dashboard that shows data like TTFB, and First Contentful Paint etc.](https://www.debugbear.com/dimg/e2bc8aee8a2a7bb0abf479b509cff1c7.png)
+
+<br/>
 
 **Reduce render-blocking resources**
 
@@ -84,6 +97,8 @@ Large hero images, while visually impactful, are often the culprits behind poor 
 <br/>
 
 ![A dev tool showing a LCP image](https://www.debugbear.com/assets/images/lcp-image-3b3d0b3a920baa9f34da608ce1da222c.png)
+
+<br/>
 
 How can you make the image load faster?
 
@@ -105,13 +120,17 @@ For example, on a mobile device with a low-resolution screen you might only need
 
 In contrast, on a high-resolution desktop screen you might need to load a larger image to deliver the best visual results to visitors.
 
+<br/>
+
 **Don't lazy load the LCP image**
 
 Lazy loading can speed up your website by focusing bandwidth on high-priority resources. However, when used on LCP elements it can actually make your site slower, as these images should be loaded with a high priority.
 
-Google found that websites with image lazy loading enabled tends to have a higher LCP. So be careful not to use loading="lazy" incorrectly.
+Google found that websites with image lazy loading enabled tends to have a higher LCP. So be careful not to use `loading="lazy"` incorrectly.
 
 ![A graph showing 75th percentile LArgest Contentful Paint](https://www.debugbear.com/assets/images/lcp-lazy-loading-27c0f2ebbb67666103f603241489afb9.png)
+
+<br/>
 
 **Prioritize the LCP image**
 
@@ -150,6 +169,8 @@ A few technicalities about INP that you may care about:
 <br/>
 
 Like FID, input delay can happen when the browser's main thread is too busy to respond to the user. Most commonly, this is due to the browser being busy parsing and executing large JavaScript files. There's a lot of unnecessary JS on many pages, and JS files have gotten bigger over the years. The more JS on your page, the more potential for slow INP times.
+
+<br/>
 
 **Steps in Measuring INP**
 
@@ -289,6 +310,8 @@ Dynamically injected content refers to the DOM elements that get added dynamical
 
 Load more and Infinite scroll are just two examples of interaction patterns where the response time should be kept under the 500ms Input exclusion window. Otherwise, as the page content gets shifted by the dynamically injected content (the footer in this particular case), the shifts will increase the CLS score. Prefetch the content to load it fast and use placeholders/skeleton while the data is being requested. Read about the possible solutions in Addy Osmani’s article - Infinite Scroll Without Layout Shifts.
 
+<br/>
+
 **Enforce Scrollbar Appearance**
 
 Some OS (like Windows) use non-overlay scrollbars. These scrollbars are added after the First Paint, during the page load and can cause page content to shift e.g. when injecting additional content with JavaScript. You can add the following rule to force the scrollbar appearance:
@@ -297,15 +320,25 @@ Some OS (like Windows) use non-overlay scrollbars. These scrollbars are added af
 html { overflow-y: scroll }
 ```
 
+<br/>
+
 This should force the scrollbar to show all the time, preventing horizontal layout shift. When not needed, the scrollbar will be grayed out but will keep its width. Note: You should consider this technique only on pages that require this fix to reduce the CLS.
+
+<br/>
 
 **Font Loading and Text Rendering Strategy**
 
 Common reasons for layout shifts are the shifting of text elements. Upon load completion, the fallback font is replaced with the web font and as a result, the text is re-rendered with the intended font. Web font loading often causes misalignment of layout elements, e.g., if text rendered with the fallback font is one line shorter than the one rendered with the web font.
 
+<br/>
+
 This can be avoided by defining a different text rendering strategy with the CSS descriptor ``font-display``. For example setting the ``font-display`` to ``optional`` within an at-rule means that: if the primary font does not load in the first 100ms, the text is rendered using the fallback font. However, the next time you visit the page the web font will be used if loaded successfully. This strategy allows us to minimize repaints and CLS.
 
+<br/>
+
 We can combine ``font-display: optional`` with `<link rel="preload">` to preload optional fonts and completely eliminate layout shifting. Read more about it in the [Preload Optional Fonts](https://web.dev/articles/preload-optional-fonts) article on web.dev.
+
+<br/>
 
 If you prefer ``font-display: swap`` or any other value except optional, try using some of the font style matching tools like [Font Style Matcher](https://meowni.ca/font-style-matcher/) or check this list - [Metric Compatible Fonts](https://wiki.archlinux.org/title/Metric-compatible_fonts). You can minimize the discrepancy between the fonts by choosing ones with similar x-heights and widths.
 
